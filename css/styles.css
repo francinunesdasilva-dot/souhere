@@ -54,11 +54,24 @@ a {
   padding: 22px 0;
 }
 
-.logo img {
-  height: 38px;
-  width: auto;
-  display: block;
+/* LOGO FIX */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  flex-shrink: 0;
 }
+
+.logo img {
+  height: 100%;
+  width: auto;
+  max-width: 180px;
+  display: block;
+  object-fit: contain;
+}
+
+/* CONTACT LINK */
 
 .header-link {
   font-size: 0.95rem;
