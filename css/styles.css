@@ -255,18 +255,16 @@ a {
   margin: 0;
 }
 
+/* ONLY FIXED THIS SECTION */
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 28px;
-
   padding: 40px;
-
-  align-items: center;
+  align-items: start;
 }
 
 .about-inner h2 {
@@ -276,12 +274,13 @@ a {
   margin: 16px 0 0;
 }
 
-.about-inner p {
-  margin: 0;
+.about-inner p:last-child {
+  margin: 74px 0 0;
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 420px;
 }
+/* END FIX */
 
 .retail-inner {
   display: grid;
@@ -434,6 +433,11 @@ a {
   .about-inner,
   .contact-shell {
     grid-template-columns: 1fr;
+  }
+
+  .about-inner p:last-child {
+    margin-top: 0;
+    max-width: 100%;
   }
 }
 
