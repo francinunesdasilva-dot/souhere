@@ -59,16 +59,13 @@ a {
 .logo {
   display: inline-flex;
   align-items: center;
-  height: 56px;
   flex-shrink: 0;
 }
 
 .logo img {
-  height: 100%;
-  width: auto;
-  max-width: 260px;
+  width: 200px;
+  height: auto;
   display: block;
-  object-fit: contain;
 }
 
 /* CONTACT LINK */
