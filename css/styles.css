@@ -36,6 +36,8 @@ a {
   margin: 0 auto;
 }
 
+/* HEADER */
+
 .site-header {
   background: rgba(252, 248, 243, 0.92);
   backdrop-filter: blur(10px);
@@ -52,20 +54,18 @@ a {
   padding: 22px 0;
 }
 
-.brand {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.08em;
-}
-
-.brand span {
-  color: var(--accent);
+.logo img {
+  height: 38px;
+  width: auto;
+  display: block;
 }
 
 .header-link {
   font-size: 0.95rem;
   color: var(--muted);
 }
+
+/* HERO */
 
 .hero {
   padding: 110px 0 70px;
@@ -75,7 +75,6 @@ a {
   max-width: 760px;
 }
 
-/* FIXED SECTION LABEL (used for Collections, The idea, Contact etc) */
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -135,6 +134,8 @@ a {
   background: white;
   color: var(--text);
 }
+
+/* SECTION SPACING */
 
 .collection,
 .about,
@@ -374,6 +375,8 @@ a {
   resize: vertical;
 }
 
+/* FOOTER */
+
 .site-footer {
   padding: 36px 0 46px;
 }
@@ -392,9 +395,7 @@ a {
   color: var(--muted);
 }
 
-.footer-brand {
-  font-size: 1.45rem;
-}
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
   .product-grid,
@@ -442,10 +443,5 @@ a {
   .retail-card,
   .product-card {
     padding: 20px;
-  }
-  .logo img {
-  height: 38px;
-  width: auto;
-  display: block;
   }
 }
