@@ -19,7 +19,7 @@
   <section class="hero">
     <div class="container hero-inner">
       <p class="eyebrow">Collect the cities you've been</p>
-      <h1>Souvenirs that feel like memories<.</h1>
+      <h1>Souvenirs that feel like memories.</h1>
       <p class="hero-text">
         Souhere creates collectibles inspired by the world’s most iconic cities, with playful pieces that capture the symbols people instantly recognize.
       </p>
@@ -100,19 +100,50 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <h2>Contact</h2>
+    <section class="contact" id="contact">
+  <div class="container contact-shell">
+    <div class="contact-copy">
+      <p class="section-label">Contact</p>
+      <h2>Interested in carrying Souhere?</h2>
+      <p class="contact-text">
+        Reach out for wholesale inquiries, partnerships, or early retailer conversations.
+      </p>
+      <a class="contact-email" href="mailto:hello@souhere.com">hello@souhere.com</a>
+    </div>
 
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-          <button class="button primary" type="submit">Send Message</button>
-        </form>
+    <form class="contact-form">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" />
+        </div>
+
+        <div class="field">
+          <label for="company">Store / Company</label>
+          <input id="company" type="text" placeholder="Your store or company" />
+        </div>
       </div>
-    </section>
 
+      <div class="form-row single">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" />
+        </div>
+      </div>
+
+      <div class="form-row single">
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us about your store or what you're looking for"></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary" type="submit">Send inquiry</button>
+      </div>
+    </form>
+  </div>
+</section>
   </main>
 
   <footer class="site-footer">
