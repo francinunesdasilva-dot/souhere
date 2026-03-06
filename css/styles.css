@@ -443,4 +443,9 @@ a {
   .product-card {
     padding: 20px;
   }
+  .logo img {
+  height: 38px;
+  width: auto;
+  display: block;
+  }
 }
