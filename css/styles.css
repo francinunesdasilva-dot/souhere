@@ -256,18 +256,31 @@ a {
 }
 
 .about-inner {
-  grid-template-columns: 0.9fr 1.1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 28px;
-  padding: 30px;
-  align-items: start;
+
+  padding: 40px;
+
+  align-items: center;
 }
 
-.about-inner p:last-child {
+.about-inner h2 {
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin: 16px 0 0;
+}
+
+.about-inner p {
   margin: 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  max-width: 420px;
 }
 
 .retail-inner {
