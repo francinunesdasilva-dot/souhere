@@ -75,14 +75,17 @@ a {
   max-width: 760px;
 }
 
-.eyebrow,
+/* FIXED SECTION LABEL (used for Collections, The idea, Contact etc) */
 .section-label {
-  display: inline-block;
-  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
   border-radius: 999px;
+  border: 1px solid var(--line);
   background: var(--accent-soft);
-  border: 1px solid #efd88a;
-  font-size: 0.82rem;
+  color: var(--text);
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -141,6 +144,7 @@ a {
 }
 
 /* COLLECTIONS */
+
 .collections-shell {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -237,25 +241,9 @@ a {
   color: var(--muted);
   font-size: 0.92rem;
 }
-/* END COLLECTIONS */
 
-.section-heading,
-.about-inner {
-  display: grid;
-  gap: 12px;
-  margin-bottom: 22px;
-}
+/* ABOUT */
 
-.section-heading h2,
-.about h2,
-.contact-copy h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
-  margin: 0;
-}
-
-/* ONLY FIXED THIS SECTION */
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -280,7 +268,8 @@ a {
   font-size: 1.05rem;
   max-width: 420px;
 }
-/* END FIX */
+
+/* RETAIL */
 
 .retail-inner {
   display: grid;
@@ -304,6 +293,8 @@ a {
   margin: 0;
   color: var(--muted);
 }
+
+/* CONTACT */
 
 .contact {
   padding: 32px 0 60px;
@@ -378,28 +369,9 @@ a {
   outline: none;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #9a9188;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #d9c3a8;
-  box-shadow: 0 0 0 3px rgba(244, 160, 0, 0.08);
-}
-
 .contact-form textarea {
   min-height: 150px;
   resize: vertical;
-}
-
-.form-actions {
-  padding-top: 4px;
-}
-
-.form-actions .button {
-  min-width: 160px;
 }
 
 .site-footer {
