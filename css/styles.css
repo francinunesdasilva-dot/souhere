@@ -1,6 +1,7 @@
 :root {
   --bg: #fcf8f3;
   --surface: #ffffff;
+  --surface-soft: #fffdf9;
   --text: #171717;
   --muted: #6f685f;
   --line: #e8ddd1;
@@ -114,6 +115,7 @@ a {
   border: 1px solid var(--line);
   font-weight: 700;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -138,7 +140,7 @@ a {
   padding: 28px 0;
 }
 
-/* COLLECTIONS - updated */
+/* COLLECTIONS */
 .collections-shell {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -146,59 +148,40 @@ a {
   padding: 30px;
 }
 
-.collections-header {
-  margin-bottom: 28px;
+.collections-shell .section-label {
+  margin-bottom: 18px;
 }
 
-.collections-header h2 {
+.city-collection-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.city-collection-header {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.city-collection-header h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1;
   letter-spacing: -0.05em;
-  margin: 14px 0 10px;
+  margin: 0 0 10px;
 }
 
 .collections-intro {
   margin: 0;
   color: var(--muted);
-  max-width: 700px;
-}
-
-.city-collection-card {
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 24px;
-  background: #fffdf9;
-}
-
-.city-collection-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 22px;
-}
-
-.city-label {
-  margin: 0 0 8px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-}
-
-.city-collection-top h3 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
+  max-width: 760px;
 }
 
 .category-pills {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .category-pill {
@@ -229,7 +212,7 @@ a {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 24px;
-  padding: 20px;
+  padding: 18px;
 }
 
 .product-image {
@@ -239,8 +222,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  margin-bottom: 16px;
+  font-size: 2.6rem;
+  margin-bottom: 14px;
 }
 
 .product-card h4 {
@@ -252,35 +235,6 @@ a {
 .product-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.future-cities {
-  margin-top: 22px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-}
-
-.future-cities-label {
-  margin: 0 0 12px;
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--muted);
-}
-
-.future-city-pills {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.future-city-pills span {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: white;
   font-size: 0.92rem;
 }
 /* END COLLECTIONS */
@@ -460,24 +414,13 @@ a {
 
 @media (max-width: 900px) {
   .product-grid,
-  .retail-inner,
-  .about-inner {
+  .retail-inner {
     grid-template-columns: 1fr 1fr;
   }
 
   .about-inner,
-  .contact-shell,
-  .city-collection-top {
+  .contact-shell {
     grid-template-columns: 1fr;
-  }
-
-  .city-collection-top {
-    display: block;
-  }
-
-  .category-pills {
-    justify-content: flex-start;
-    margin-top: 16px;
   }
 }
 
