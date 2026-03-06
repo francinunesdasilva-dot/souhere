@@ -147,7 +147,7 @@ a {
 
 .section-heading h2,
 .about h2,
-.contact h2 {
+.contact-copy h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1;
   letter-spacing: -0.05em;
@@ -222,27 +222,104 @@ a {
   color: var(--muted);
 }
 
-.contact-inner {
+/* CONTACT - updated */
+.contact {
+  padding: 32px 0 60px;
+}
+
+.contact-shell {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 28px;
   padding: 32px;
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: start;
 }
 
-.contact-inner h2 {
-  margin: 14px 0 10px;
+.contact-copy h2 {
+  margin: 14px 0 12px;
 }
 
 .contact-text {
   color: var(--muted);
-  margin: 0;
+  margin: 0 0 18px;
+  max-width: 420px;
 }
 
-.contact-text a {
-  color: var(--text);
+.contact-email {
+  display: inline-block;
   font-weight: 700;
+  color: var(--text);
 }
+
+.contact-form {
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-row.single {
+  grid-template-columns: 1fr;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 15px;
+  font: inherit;
+  background: white;
+  color: var(--text);
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9a9188;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d9c3a8;
+  box-shadow: 0 0 0 3px rgba(244, 160, 0, 0.08);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-actions {
+  padding-top: 4px;
+}
+
+.form-actions .button {
+  min-width: 160px;
+}
+/* END CONTACT */
 
 .site-footer {
   padding: 36px 0 46px;
@@ -273,7 +350,8 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 
-  .about-inner {
+  .about-inner,
+  .contact-shell {
     grid-template-columns: 1fr;
   }
 }
@@ -286,7 +364,8 @@ a {
   }
 
   .product-grid,
-  .retail-inner {
+  .retail-inner,
+  .form-row {
     grid-template-columns: 1fr;
   }
 
@@ -298,7 +377,8 @@ a {
     font-size: 3rem;
   }
 
-  .contact-inner,
+  .contact-shell,
+  .contact-form,
   .about-inner,
   .retail-card,
   .product-card {
