@@ -31,6 +31,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .container {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;
@@ -54,8 +59,6 @@ a {
   padding: 22px 0;
 }
 
-/* LOGO FIX */
-
 .logo {
   display: inline-flex;
   align-items: center;
@@ -65,10 +68,7 @@ a {
 .logo img {
   width: 240px;
   height: auto;
-  display: block;
 }
-
-/* CONTACT LINK */
 
 .header-link {
   font-size: 0.95rem;
@@ -78,13 +78,21 @@ a {
 /* HERO */
 
 .hero {
-  padding: 110px 0 70px;
+  padding: 90px 0 70px;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+  gap: 56px;
+  align-items: center;
 }
 
 .hero-inner {
   max-width: 760px;
 }
 
+.eyebrow,
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -117,6 +125,23 @@ a {
   gap: 12px;
   flex-wrap: wrap;
 }
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+/* BUTTONS */
 
 .button {
   display: inline-flex;
@@ -391,31 +416,36 @@ a {
   padding: 36px 0 46px;
 }
 
-.footer-inner {
+.site-footer .container {
   border-top: 1px solid var(--line);
   padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-}
-
-.footer-inner p {
-  margin: 0;
   color: var(--muted);
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
-  .product-grid,
-  .retail-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
+  .hero-layout,
   .about-inner,
   .contact-shell {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-visual {
+    justify-content: flex-start;
+  }
+
+  .hero-visual img {
+    max-width: 520px;
+  }
+
+  .product-grid,
+  .retail-inner {
+    grid-template-columns: 1fr 1fr;
   }
 
   .about-inner p:last-child {
@@ -425,10 +455,13 @@ a {
 }
 
 @media (max-width: 640px) {
-  .header-inner,
-  .footer-inner {
-    flex-direction: column;
+  .header-inner {
+    gap: 14px;
     align-items: flex-start;
+  }
+
+  .logo img {
+    width: 190px;
   }
 
   .product-grid,
@@ -438,7 +471,7 @@ a {
   }
 
   .hero {
-    padding: 80px 0 50px;
+    padding: 56px 0 42px;
   }
 
   .hero h1 {
