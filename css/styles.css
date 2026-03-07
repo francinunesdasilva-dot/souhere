@@ -56,12 +56,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 0;
+  padding: 18px 0;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -77,7 +78,7 @@ img {
 /* HERO */
 
 .hero {
-  padding: 60px 0 70px;
+  padding: 42px 0 70px;
 }
 
 .hero-layout {
@@ -89,14 +90,14 @@ img {
 
 .hero-inner {
   max-width: 760px;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .eyebrow {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 16px;
+  color: var(--text);
+  margin: 0 0 18px;
 }
 
 .hero-visual {
@@ -131,7 +132,7 @@ img {
   font-size: clamp(3.2rem, 7vw, 6rem);
   line-height: 0.92;
   letter-spacing: -0.08em;
-  margin: 20px 0 18px;
+  margin: 0 0 18px;
 }
 
 .hero-text {
@@ -433,6 +434,11 @@ img {
 @media (max-width: 900px) {
   .hero-layout {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-visual {
+    justify-content: flex-start;
   }
 
   .hero-visual img {
@@ -471,11 +477,16 @@ img {
   }
 
   .hero {
-    padding: 70px 0 50px;
+    padding: 34px 0 50px;
   }
 
   .hero h1 {
     font-size: 3rem;
+  }
+
+  .eyebrow {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
   }
 
   .collections-shell,
