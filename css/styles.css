@@ -77,7 +77,7 @@ img {
 /* HERO */
 
 .hero {
-  padding: 90px 0 70px;
+  padding: 60px 0 70px;
 }
 
 .hero-layout {
@@ -89,6 +89,14 @@ img {
 
 .hero-inner {
   max-width: 760px;
+  margin-top: 8px;
+}
+
+.eyebrow {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 16px;
 }
 
 .hero-visual {
