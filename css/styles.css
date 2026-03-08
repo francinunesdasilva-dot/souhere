@@ -85,12 +85,13 @@ img {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-inner {
   max-width: 760px;
   margin-top: 0;
+  padding-top: 0;
 }
 
 .eyebrow {
@@ -103,7 +104,7 @@ img {
 .hero-visual {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-visual img {
@@ -434,7 +435,7 @@ img {
 @media (max-width: 900px) {
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
   .hero-visual {
@@ -477,7 +478,7 @@ img {
   }
 
   .hero {
-    padding: 12px 0 50px;
+    padding: 6px 0 50px;
   }
 
   .hero h1 {
